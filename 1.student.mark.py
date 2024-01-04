@@ -8,10 +8,10 @@ studentInformations = {
 }
 
 #   Input Functions
-def getNumberOfStudent(n:int):
+def numberOfStudent(n:int):
     studentInformations["numberOfStudents"] = n
 
-def getStudentInformation(name:str, Id:str,DoB:str):
+def informations(name:str, Id:str,DoB:str):
     student = {
         "name":name,
         "id":Id,
@@ -19,10 +19,10 @@ def getStudentInformation(name:str, Id:str,DoB:str):
     }
     studentInformations["students"].append(student)
 
-def getNumberOfCourses(n:int):
+def numberOfCourses(n:int):
     studentInformations["numberOfCourses"] = n
 
-def getCourseInfomation(Id:str,name:str):
+def courseInfomations(Id:str,name:str):
     course = {
         "name":name,
         "id":Id,
@@ -30,7 +30,7 @@ def getCourseInfomation(Id:str,name:str):
     }
     studentInformations["courses"].append(course)
 
-def getStudentMark(studentID:str,courseID:str,mark:float):
+def mark(studentID:str,courseID:str,mark:float):
     index = 0
     for student in studentInformations["students"]:
         if student["id"] == studentID:
@@ -58,24 +58,24 @@ def listMark(courseID:str):
 
 #   Main
 #       Add students
-getNumberOfStudent(5)
-getStudentInformation("Phạm Hoàng Anh","22BI13304","04/11/2004")
-getStudentInformation("Nguyễn Việt Anh","22BI13039","04/11/2004")
-getStudentInformation("Nguyễn Hoài Anh","22BI13021","01/11/2004")
-getStudentInformation("Lâm Chí Cường","22BI13068","03/11/2004")
-getStudentInformation("Vũ Đức Duy","22BI13127","01/11/2004")
+numberOfStudent(5)
+informations("Phạm Hoàng Anh","22BI13304","04/11/2004")
+informations("Nguyễn Việt Anh","22BI13039","04/11/2004")
+informations("Nguyễn Hoài Anh","22BI13021","01/11/2004")
+informations("Lâm Chí Cường","22BI13068","03/11/2004")
+informations("Vũ Đức Duy","22BI13127","01/11/2004")
 
 #       Add courses
-getNumberOfCourses(3)
-getCourseInfomation("ADS","Algorithm and Data Structure")
-getCourseInfomation("APP","Advanced Programming with Python")
-getCourseInfomation("OOP","Object Oriented Programming")
+numberOfCourses(3)
+courseInfomations("ADS","Algorithm and Data Structure")
+courseInfomations("AP","Advanced Programming with Python")
+courseInfomations("OOP","Object Oriented Programming")
 
 #       Add mark
 for student in studentInformations["students"]:
-    getStudentMark(student["id"],"ADS",random() * 20)
-    getStudentMark(student["id"],"APP",random() * 20)
-    getStudentMark(student["id"],"OOP",random() * 20)
+    mark(student["id"],"ADS",random() * 20)
+    mark(student["id"],"AP",random() * 20)
+    mark(student["id"],"OOP",random() * 20)
 
 #       Listing the information
 print("\nAll students in the class:\n")
@@ -83,7 +83,7 @@ listStudent()
 print("\nAll courses:\n")
 listCourses()
 print("\nStudent Mark in APP:\n")
-listMark("APP")
+listMark("AP")
 print("\nStudent Mark in ADS\n")
 listMark("ADS")
 print("\nStudent Mark in OOP\n")
