@@ -66,15 +66,21 @@ informations("Lâm Chí Cường","22BI13068","03/11/2004")
 informations("Vũ Đức Duy","22BI13127","01/11/2004")
 
 #       Add courses
-numberOfCourses(3)
+numberOfCourses(6)
+courseInfomations("FD","Fundamentals of Databases")
+courseInfomations("SS","Signal and Systems")
+courseInfomations("NM","Numerical Methods")
 courseInfomations("ADS","Algorithm and Data Structure")
-courseInfomations("AP","Advanced Programming with Python")
+courseInfomations("APP","Advanced Programming with Python")
 courseInfomations("OOP","Object Oriented Programming")
 
 #       Add mark
 for student in studentInformations["students"]:
+    studentMark(student["id"],"FD",random() * 20)
+    studentMark(student["id"],"SS",random() * 20)
+    studentMark(student["id"],"NP",random() * 20)
     studentMark(student["id"],"ADS",random() * 20)
-    studentMark(student["id"],"AP",random() * 20)
+    studentMark(student["id"],"APP",random() * 20)
     studentMark(student["id"],"OOP",random() * 20)
 
 #       Listing the information
@@ -82,9 +88,5 @@ print("\nAll students in the class:\n")
 listStudent()
 print("\nAll courses:\n")
 listCourses()
-print("\nStudent Mark in APP:\n")
-listMark("AP")
-print("\nStudent Mark in ADS\n")
-listMark("ADS")
-print("\nStudent Mark in OOP\n")
-listMark("OOP")
+courseID = input("\n Please choose the course that you want to see the result: \n")
+listMark(courseID)
