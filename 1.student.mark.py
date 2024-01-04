@@ -60,8 +60,8 @@ def listMark(courseID:str):
 #       Add students
 getNumberOfStudent(5)
 getStudentInformation("Phạm Hoàng Anh","22BI13304","04/11/2004")
-getStudentInformation("Nguyễn Việt Anh","22BI13039","04/8/2004")
-getStudentInformation("Nguyễn Hoài Anh","22BI13021","01/10/2004")
+getStudentInformation("Nguyễn Việt Anh","22BI13039","04/11/2004")
+getStudentInformation("Nguyễn Hoài Anh","22BI13021","01/11/2004")
 getStudentInformation("Lâm Chí Cường","22BI13068","03/11/2004")
 getStudentInformation("Vũ Đức Duy","22BI13127","01/11/2004")
 
