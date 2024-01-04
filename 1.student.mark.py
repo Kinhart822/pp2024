@@ -30,7 +30,7 @@ def courseInfomations(Id:str,name:str):
     }
     studentInformations["courses"].append(course)
 
-def mark(studentID:str,courseID:str,mark:float):
+def studentMark(studentID:str,courseID:str,mark:float):
     index = 0
     for student in studentInformations["students"]:
         if student["id"] == studentID:
@@ -73,9 +73,9 @@ courseInfomations("OOP","Object Oriented Programming")
 
 #       Add mark
 for student in studentInformations["students"]:
-    mark(student["id"],"ADS",random() * 20)
-    mark(student["id"],"AP",random() * 20)
-    mark(student["id"],"OOP",random() * 20)
+    studentMark(student["id"],"ADS",random() * 20)
+    studentMark(student["id"],"AP",random() * 20)
+    studentMark(student["id"],"OOP",random() * 20)
 
 #       Listing the information
 print("\nAll students in the class:\n")
