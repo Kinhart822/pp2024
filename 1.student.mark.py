@@ -11,11 +11,11 @@ studentInformations = {
 def getNumberOfStudent(n:int):
     studentInformations["numberOfStudents"] = n
 
-def getStudentInformation(name:str, Id:str,Dob:str):
+def getStudentInformation(name:str, Id:str,DoB:str):
     student = {
         "name":name,
         "id":Id,
-        "dob":Dob
+        "DoB":DoB
     }
     studentInformations["students"].append(student)
 
@@ -48,7 +48,7 @@ def listCourses():
 
 def listStudent():
     for student in studentInformations["students"]:
-        print(f"{student['name']} - {student['id']} - {student['dob']}")
+        print(f"{student['name']} - {student['id']} - {student['DoB']}")
 
 def listMark(courseID:str):
     for course in studentInformations["courses"]:
