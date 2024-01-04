@@ -2,8 +2,8 @@ from random import random
 
 studentInformations = {
     "students": [],
-    "numberOfStudents": [],
-    "numberOfCourses": [],
+    "numberOfStudents": int,
+    "numberOfCourses": int,
     "courses": []
 }
 
