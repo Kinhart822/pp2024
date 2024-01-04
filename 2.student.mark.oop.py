@@ -51,8 +51,8 @@ school = School()
 
 # Add students
 school.add_student("Phạm Hoàng Anh","22BI13304","04/11/2004")
-school.add_student("Nguyễn Việt Anh","22BI13039","04/8/2004")
-school.add_student("Nguyễn Hoài Anh","22BI13021","01/10/2004")
+school.add_student("Nguyễn Việt Anh","22BI13039","04/11/2004")
+school.add_student("Nguyễn Hoài Anh","22BI13021","01/11/2004")
 school.add_student("Lâm Chí Cường","22BI13068","03/11/2004")
 school.add_student("Vũ Đức Duy","22BI13127","01/11/2004")
 
