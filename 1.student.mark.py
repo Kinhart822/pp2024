@@ -2,8 +2,8 @@ from random import random
 
 studentInformations = {
     "students": [],
-    "numberOfStudents": 0,
-    "numberOfCourses": 0,
+    "numberOfStudents": [],
+    "numberOfCourses": [],
     "courses": []
 }
 
@@ -12,49 +12,49 @@ def numberOfStudent(n:int):
     studentInformations["numberOfStudents"] = n
 
 def informations(name:str, Id:str,DoB:str):
-    student = {
+    students = {
         "name":name,
         "id":Id,
         "DoB":DoB
     }
-    studentInformations["students"].append(student)
+    studentInformations["students"].append(students)
 
 def numberOfCourses(n:int):
     studentInformations["numberOfCourses"] = n
 
 def courseInfomations(Id:str,name:str):
-    course = {
+    courses = {
         "name":name,
         "id":Id,
         "mark": [0]*len(studentInformations["students"])
     }
-    studentInformations["courses"].append(course)
+    studentInformations["courses"].append(courses)
 
 def studentMark(studentID:str,courseID:str,mark:float):
     index = 0
-    for student in studentInformations["students"]:
-        if student["id"] == studentID:
+    for students in studentInformations["students"]:
+        if students["id"] == studentID:
             break
         index += 1
 
-    for course in studentInformations["courses"]:
-        if course["id"] == courseID:
-            course["mark"][index] = mark
+    for courses in studentInformations["courses"]:
+        if courses["id"] == courseID:
+            courses["mark"][index] = mark
 
 #   Listing Functions
 def listCourses():
-    for course in studentInformations["courses"]:
-        print(f"Course Name: {course['name']} - ID: {course['id']}")
+    for courses in studentInformations["courses"]:
+        print(f"Course Name: {courses['name']} - ID: {courses['id']}")
 
 def listStudent():
-    for student in studentInformations["students"]:
-        print(f"{student['name']} - {student['id']} - {student['DoB']}")
+    for students in studentInformations["students"]:
+        print(f"{students['name']} - {students['id']} - {students['DoB']}")
 
 def listMark(courseID:str):
-    for course in studentInformations["courses"]:
-        if courseID == course["id"]:
+    for courses in studentInformations["courses"]:
+        if courseID == courses["id"]:
             for i in range(len(studentInformations["students"])):
-                print(f"{studentInformations['students'][i]['name']} got {course['mark'][i]:.2f} in {course['name']}")
+                print(f"{studentInformations['students'][i]['name']} got {courses['mark'][i]:.2f} in {courses['name']}")
 
 #   Main
 #       Add students
