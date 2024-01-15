@@ -1,7 +1,8 @@
-from random import random
 import math
 import numpy as np
 import curses
+from random import random
+
 
 class Student:
     def __init__(self, name, Id, DoB):
