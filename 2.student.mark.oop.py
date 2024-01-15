@@ -55,7 +55,7 @@ school.add_student("Lâm Chí Cường","22BI13068","03/11/2004")
 school.add_student("Vũ Đức Duy","22BI13127","01/11/2004")
 
 # Add courses
-school.add_course("FD","Fundamentals of Databases")
+school.add_course("FD","Fundamentals of Database")
 school.add_course("SS","Signal and Systems")
 school.add_course("NM","Numerical Methods")
 school.add_course("ADS","Algorithm and Data Structure")
