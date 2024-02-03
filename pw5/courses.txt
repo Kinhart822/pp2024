@@ -1,0 +1,6 @@
+Fundamentals of Databases - FD - 3
+Signal and Systems - SS - 4
+Numerical Methods - NM - 3
+Algorithm and Data Structure - ADS - 4
+Advanced Programming with Python - APP - 3
+Object Oriented Programming - OOP - 4
